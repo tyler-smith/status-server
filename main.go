@@ -1,14 +1,14 @@
 package main
 
 import (
-	"net/http"
 	"encoding/json"
-	"io/ioutil"
+	"flag"
 	"fmt"
 	"gx/ipfs/QmXY77cVe7rVRQXZZQRioukUM7aRW3BTcAgJe12MCtb3Ji/go-multiaddr"
-	"net"
+	"io/ioutil"
 	"log"
-	"flag"
+	"net"
+	"net/http"
 )
 
 func main() {
@@ -49,7 +49,7 @@ func main() {
 			if ipErr != nil {
 				ip, ipErr = ma.ValueForProtocol(multiaddr.P_IP6)
 				network = "tcp6"
-				ip = "["+ip+"]"
+				ip = "[" + ip + "]"
 			}
 
 			if ipErr == nil && portErr == nil {
