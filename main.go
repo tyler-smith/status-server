@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"gx/ipfs/QmXY77cVe7rVRQXZZQRioukUM7aRW3BTcAgJe12MCtb3Ji/go-multiaddr"
 	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
+
+	"github.com/jbenet/go-multiaddr"
 )
 
 func main() {
